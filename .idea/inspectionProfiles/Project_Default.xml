@@ -1,0 +1,53 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="mysqlclient" />
+            <item index="1" class="java.lang.String" itemvalue="Django" />
+            <item index="2" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="3" class="java.lang.String" itemvalue="pytz" />
+            <item index="4" class="java.lang.String" itemvalue="Pillow" />
+            <item index="5" class="java.lang.String" itemvalue="sqlparse" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E302" />
+          <option value="E303" />
+          <option value="E111" />
+          <option value="E262" />
+          <option value="E722" />
+          <option value="W292" />
+          <option value="E501" />
+          <option value="E265" />
+          <option value="E128" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="apps.school.models.SchoolInfo.objects" />
+          <option value="apps.teachers.models.TeachersInfo.objects" />
+          <option value="apps.students.models.Student.objects" />
+          <option value="apps.TeacherClassSubject.models.TeacherClassSubject.objects" />
+          <option value="apps.TeacherClassSubject.models.Exam.objects" />
+          <option value="apps.exam_results.models.ExamResult.objects" />
+          <option value="apps.TeachersClass.models.TeacherClass.objects" />
+          <option value="apps.exam_results.models.AuthorizedExam.objects" />
+          <option value="apps.exam_results.models.AuthorizedResults.objects" />
+          <option value="apps.subjects.models.SubjectInfo.objects" />
+          <option value="apps.TeachersClass.models.TeacherClass.DoesNotExist" />
+          <option value="apps.TeacherClassSubject.models.Exam.DoesNotExist" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

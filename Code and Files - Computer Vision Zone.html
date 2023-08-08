@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://www.computervision.zone/lessons/code-and-files-26/ -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Code and Files - Computer Vision Zone</title>
+	<link rel="canonical" href="https://www.computervision.zone/lessons/code-and-files-26/">
+	<meta property="og:locale" content="en_GB">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Code and Files - Computer Vision Zone">
+	<meta property="og:description" content="Face Recognition with Real-Time Database Code and Files In Progress Click here to download files and images. Main.py EncodeGenerator.py AddDatatoDatabase.py Previous Lesson Back to Course">
+	<meta property="og:url" content="https://www.computervision.zone/lessons/code-and-files-26/">
+	<meta property="og:site_name" content="Computer Vision Zone">
+	<meta property="article:modified_time" content="2022-12-13T13:48:32+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.computervision.zone/lessons/code-and-files-26/","url":"https://www.computervision.zone/lessons/code-and-files-26/","name":"Code and Files - Computer Vision Zone","isPartOf":{"@id":"https://www.computervision.zone/#website"},"datePublished":"2022-12-13T13:39:24+00:00","dateModified":"2022-12-13T13:48:32+00:00","breadcrumb":{"@id":"https://www.computervision.zone/lessons/code-and-files-26/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.computervision.zone/lessons/code-and-files-26/"]}]},{"@type":"BreadcrumbList","@id":"https://www.computervision.zone/lessons/code-and-files-26/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.computervision.zone/"},{"@type":"ListItem","position":2,"name":"Code and Files"}]},{"@type":"WebSite","@id":"https://www.computervision.zone/#website","url":"https://www.computervision.zone/","name":"Computer Vision Zone","description":"The Future is Now","publisher":{"@id":"https://www.computervision.zone/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.computervision.zone/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://www.computervision.zone/#organization","name":"Computer Vision Zone","url":"https://www.computervision.zone/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.computervision.zone/#/schema/logo/image/","url":"https://www.computervision.zone/wp-content/uploads/2020/04/logo-Design-e1587105343735.jpg","contentUrl":"https://www.computervision.zone/wp-content/uploads/2020/04/logo-Design-e1587105343735.jpg","width":300,"height":200,"caption":"Computer Vision Zone"},"image":{"@id":"https://www.computervision.zone/#/schema/logo/image/"},"sameAs":["https://www.youtube.com/murtazasworkshoproboticsandai"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Computer Vision Zone » Feed" href="https://www.computervision.zone/feed/">
+<link rel="alternate" type="application/rss+xml" title="Computer Vision Zone » Comments Feed" href="https://www.computervision.zone/comments/feed/">
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.17 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+		<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+					<!-- No tracking code set -->
+				<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.computervision.zone\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.5"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="./Code and Files - Computer Vision Zone_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="sgr-css" href="./Code and Files - Computer Vision Zone_files/sgr.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="./Code and Files - Computer Vision Zone_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wc-blocks-vendors-style-css" href="./Code and Files - Computer Vision Zone_files/wc-blocks-vendors-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="wc-blocks-style-css" href="./Code and Files - Computer Vision Zone_files/wc-blocks-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="jet-engine-frontend-css" href="./Code and Files - Computer Vision Zone_files/frontend.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="stylesheet" id="hide-admin-bar-based-on-user-roles-css" href="./Code and Files - Computer Vision Zone_files/hide-admin-bar-based-on-user-roles-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce-layout-css" href="./Code and Files - Computer Vision Zone_files/woocommerce-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce-smallscreen-css" href="./Code and Files - Computer Vision Zone_files/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)">
+<link rel="stylesheet" id="woocommerce-general-css" href="./Code and Files - Computer Vision Zone_files/woocommerce.css" type="text/css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel="stylesheet" id="learndash_quiz_front_css-css" href="./Code and Files - Computer Vision Zone_files/learndash_quiz_front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-dropdown-css-css" href="./Code and Files - Computer Vision Zone_files/jquery.dropdown.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="learndash_lesson_video-css" href="./Code and Files - Computer Vision Zone_files/learndash_lesson_video.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="video-contest-widgets-css" href="./Code and Files - Computer Vision Zone_files/widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="hello-elementor-css" href="./Code and Files - Computer Vision Zone_files/style.min(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="hello-elementor-theme-style-css" href="./Code and Files - Computer Vision Zone_files/theme.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="learndash-front-css" href="./Code and Files - Computer Vision Zone_files/learndash.min.css" type="text/css" media="all">
+<style id="learndash-front-inline-css" type="text/css">
+		.learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content {
+			max-width: inherit;
+		}
+		
+</style>
+<link rel="stylesheet" id="jet-theme-core-frontend-styles-css" href="./Code and Files - Computer Vision Zone_files/frontend(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="jet-elements-css" href="./Code and Files - Computer Vision Zone_files/jet-elements.css" type="text/css" media="all">
+<link rel="stylesheet" id="jet-elements-skin-css" href="./Code and Files - Computer Vision Zone_files/jet-elements-skin.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="./Code and Files - Computer Vision Zone_files/elementor-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-legacy-css" href="./Code and Files - Computer Vision Zone_files/frontend-legacy.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="./Code and Files - Computer Vision Zone_files/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="swiper-css" href="./Code and Files - Computer Vision Zone_files/swiper.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-192-css" href="./Code and Files - Computer Vision Zone_files/post-192.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="./Code and Files - Computer Vision Zone_files/frontend.min(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-5-all-css" href="./Code and Files - Computer Vision Zone_files/all.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-4-shim-css" href="./Code and Files - Computer Vision Zone_files/v4-shims.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-51229-css" href="./Code and Files - Computer Vision Zone_files/post-51229.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-52945-css" href="./Code and Files - Computer Vision Zone_files/post-52945.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="./Code and Files - Computer Vision Zone_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="./Code and Files - Computer Vision Zone_files/fontawesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="./Code and Files - Computer Vision Zone_files/solid.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-brands-css" href="./Code and Files - Computer Vision Zone_files/brands.min.css" type="text/css" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><script type="text/javascript" id="sgr-js-extra">
+/* <![CDATA[ */
+var sgr = {"sgr_site_key":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/sgr.js.download" id="sgr-js"></script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/jquery.min.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/hide-admin-bar-based-on-user-roles-public.js.download" id="hide-admin-bar-based-on-user-roles-js"></script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/v4-shims.min.js.download" id="font-awesome-4-shim-js"></script>
+<link rel="https://api.w.org/" href="https://www.computervision.zone/wp-json/"><link rel="alternate" type="application/json" href="https://www.computervision.zone/wp-json/wp/v2/sfwd-lessons/103864"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.computervision.zone/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.computervision.zone/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 6.0.5">
+<meta name="generator" content="WooCommerce 7.7.2">
+<link rel="shortlink" href="https://www.computervision.zone/?p=103864">
+<link rel="alternate" type="application/json+oembed" href="https://www.computervision.zone/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.computervision.zone%2Flessons%2Fcode-and-files-26%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.computervision.zone/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.computervision.zone%2Flessons%2Fcode-and-files-26%2F&amp;format=xml">
+<style>[class*=" icon-oc-"],[class^=icon-oc-]{speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-oc-one-com-white-32px-fill:before{content:"901"}.icon-oc-one-com:before{content:"900"}#one-com-icon,.toplevel_page_onecom-wp .wp-menu-image{speak:none;display:flex;align-items:center;justify-content:center;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.onecom-wp-admin-bar-item>a,.toplevel_page_onecom-wp>.wp-menu-name{font-size:16px;font-weight:400;line-height:1}.toplevel_page_onecom-wp>.wp-menu-name img{width:69px;height:9px;}.wp-submenu-wrap.wp-submenu>.wp-submenu-head>img{width:88px;height:auto}.onecom-wp-admin-bar-item>a img{height:7px!important}.onecom-wp-admin-bar-item>a img,.toplevel_page_onecom-wp>.wp-menu-name img{opacity:.8}.onecom-wp-admin-bar-item.hover>a img,.toplevel_page_onecom-wp.wp-has-current-submenu>.wp-menu-name img,li.opensub>a.toplevel_page_onecom-wp>.wp-menu-name img{opacity:1}#one-com-icon:before,.onecom-wp-admin-bar-item>a:before,.toplevel_page_onecom-wp>.wp-menu-image:before{content:'';position:static!important;background-color:rgba(240,245,250,.4);border-radius:102px;width:18px;height:18px;padding:0!important}.onecom-wp-admin-bar-item>a:before{width:14px;height:14px}.onecom-wp-admin-bar-item.hover>a:before,.toplevel_page_onecom-wp.opensub>a>.wp-menu-image:before,.toplevel_page_onecom-wp.wp-has-current-submenu>.wp-menu-image:before{background-color:#76b82a}.onecom-wp-admin-bar-item>a{display:inline-flex!important;align-items:center;justify-content:center}#one-com-logo-wrapper{font-size:4em}#one-com-icon{vertical-align:middle}.imagify-welcome{display:none !important;}</style>        <script type="text/javascript">
+            var ajaxurl = 'https://www.computervision.zone/wp-admin/admin-ajax.php';
+        </script>
+        	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Elementor 3.14.1; features: a11y_improvements, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<link rel="icon" href="https://usercontent.one/wp/www.computervision.zone/wp-content/uploads/2021/04/cropped-cv-32x32.png?media=1632743877" sizes="32x32">
+<link rel="icon" href="https://usercontent.one/wp/www.computervision.zone/wp-content/uploads/2021/04/cropped-cv-192x192.png?media=1632743877" sizes="192x192">
+<link rel="apple-touch-icon" href="https://usercontent.one/wp/www.computervision.zone/wp-content/uploads/2021/04/cropped-cv-180x180.png?media=1632743877">
+<meta name="msapplication-TileImage" content="https://usercontent.one/wp/www.computervision.zone/wp-content/uploads/2021/04/cropped-cv-270x270.png?media=1632743877">
+	<style>[id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap-modal-div{display:none!important;min-height:0!important;height:0!important;}</style></head>
+	<body data-rsssl="1" class="sfwd-lessons-template-default single single-sfwd-lessons postid-103864 logged-in wp-custom-logo theme-hello-elementor woocommerce-js ld-in-focus-mode elementor-default elementor-kit-192 learndash-cpt learndash-cpt-sfwd-lessons learndash-template-ld30 learndash-cpt-sfwd-lessons-103864-current learndash-cpt-sfwd-courses-103859-parent learndash-embed-responsive">
+
+		<div class="learndash-wrapper">
+						<div class="ld-focus ld-focus-initial-transition  ld-focus-position-default">
+				
+<div class="ld-focus-sidebar">
+	<div class="ld-course-navigation-heading">
+
+		
+		<span class="ld-focus-sidebar-trigger">
+						<span class="ld-icon ld-icon-arrow-left"></span>
+					</span>
+
+		
+		
+		<h3>
+			<a href="https://www.computervision.zone/courses/face-recognition-with-real-time-database/" id="ld-focus-mode-course-heading">
+				<span class="ld-icon ld-icon-content"></span>
+				Face Recognition with Real-Time Database			</a>
+		</h3>
+			</div>
+	<div class="ld-focus-sidebar-wrapper">
+				<div class="ld-course-navigation">
+			<div class="ld-course-navigation-list">
+				<div class="ld-lesson-navigation">
+					<div class="ld-lesson-items" id="ld-lesson-list-103859">
+						
+<div class="ld-lesson-item ld-is-not-current-lesson learndash-incomplete is_not_sample">
+	<div class="ld-lesson-item-preview">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://www.computervision.zone/lessons/video-lesson-28/">
+
+			<div class="ld-status-icon ld-status-incomplete"></div>
+			<div class="ld-lesson-title">
+				Video Lesson			</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+
+		
+	</div> <!--/.ld-lesson-item-preview-->
+	</div> <!--/.ld-lesson-item-->
+
+<div class="ld-lesson-item ld-is-current-lesson learndash-incomplete is_not_sample">
+	<div class="ld-lesson-item-preview">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://www.computervision.zone/lessons/code-and-files-26/">
+
+			<div class="ld-status-icon ld-status-incomplete"></div>
+			<div class="ld-lesson-title">
+				Code and Files			</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+
+		
+	</div> <!--/.ld-lesson-item-preview-->
+	</div> <!--/.ld-lesson-item-->
+					</div> <!--/.ld-lesson-items-->
+				</div> <!--/.ld-lesson-navigation-->
+			</div> <!--/.ld-course-navigation-list-->
+		</div> <!--/.ld-course-navigation-->
+			</div> <!--/.ld-focus-sidebar-wrapper-->
+</div> <!--/.ld-focus-sidebar-->
+
+
+	<div class="ld-focus-main">
+
+		<div class="ld-focus-header">
+
+	
+	<div class="ld-mobile-nav">
+		<a href="https://www.computervision.zone/lessons/code-and-files-26/#" class="ld-trigger-mobile-nav" aria-label="Menu">
+			<span class="bar-1"></span>
+			<span class="bar-2"></span>
+			<span class="bar-3"></span>
+		</a>
+	</div>
+
+	
+	<div class="ld-brand-logo">
+	<a href="https://www.computervision.zone/"><img src="./Code and Files - Computer Vision Zone_files/logo-cvzone.svg" alt=""></a>	</div>
+
+		<div class="ld-progress
+	">
+					<div class="ld-progress-wrap">
+					<div class="ld-progress-heading">
+								<div class="ld-progress-stats">
+					<div class="ld-progress-percentage ld-secondary-color">
+					0% Complete					</div>
+					<div class="ld-progress-steps">
+						0/2 Steps					</div>
+				</div> <!--/.ld-progress-stats-->
+			</div>
+
+			<div class="ld-progress-bar">
+				<div class="ld-progress-bar-percentage ld-secondary-background" style="width:0%"></div>
+			</div>
+							</div> <!--/.ld-progress-wrap-->
+				</div> <!--/.ld-progress-->
+	<div class="ld-content-actions">
+
+		<div class="ld-content-action ">
+			<a class="ld-button ld-button-transparent" href="https://www.computervision.zone/lessons/video-lesson-28/">
+						<span class="ld-icon ld-icon-arrow-left"></span>
+						<span class="ld-text">Previous Lesson</span>
+		</a>
+		</div>
+
+		<div class="ld-content-action ">
+		<form class="sfwd-mark-complete" method="post" action="https://www.computervision.zone/lessons/code-and-files-26/"><input type="hidden" value="103864" name="post">
+				<input type="hidden" value="103859" name="course_id">
+				<input type="hidden" value="c7eb137743" name="sfwd_mark_complete">
+				<input type="submit" value="Mark Complete" class="learndash_mark_complete_button"></form>	</div>
+		
+</div> <!--/.ld-topic-actions-->
+
+
+			<div class="ld-user-menu">
+						<span class="ld-text ld-user-welcome-text">
+			Hello, alex_murimi!				</span>
+
+			<span class="ld-profile-avatar">
+							</span> <!--/.ld-profile-avatar-->
+
+			
+			<span class="ld-user-menu-items">
+										<a href="https://www.computervision.zone/courses/face-recognition-with-real-time-database/">Course Home</a>
+												<a href="https://www.computervision.zone/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fwww.computervision.zone%2Fcourses%2Fface-recognition-with-real-time-database%2F&amp;_wpnonce=2af2805e98">Logout</a>
+									</span> <!--/.ld-user-menu-items-->
+
+			
+		</div>
+		</div> <!--/.ld-focus-header-->
+
+		<div class="ld-focus-content">
+
+			
+			<h1>Code and Files</h1>
+
+			
+			<div class="learndash learndash_post_sfwd-lessons user_has_access" id="learndash_post_103864">
+<div class="learndash-wrapper">
+
+	<div class="learndash-wrapper learndash-wrap learndash-shortcode-wrap learndash-shortcode-wrap-ld_infobar-103859_103864_220814">
+
+		<div class="ld-lesson-status">
+			<div class="ld-breadcrumbs">
+
+				
+<div class="ld-breadcrumbs-segments">
+				<span><a href="https://www.computervision.zone/courses/face-recognition-with-real-time-database/">Face Recognition with Real-Time Database</a> </span>
+						<span><a href="https://www.computervision.zone/lessons/code-and-files-26/">Code and Files</a> </span>
+			</div> <!--/.ld-breadcrumbs-segments-->
+
+<div class="ld-status ld-status-progress ld-primary-background">In Progress</div>
+			</div> <!--/.ld-breadcrumbs-->
+
+					</div>
+
+		
+</div>
+<div class="ld-tabs ld-tab-count-1">
+	
+	<div class="ld-tabs-content">
+		
+			<div role="tabpanel" tabindex="0" aria-labelledby="content" class="ld-tab-content ld-visible" id="ld-tab-content-103864">
+								
+<h2><a href="https://usercontent.one/wp/www.computervision.zone/wp-content/uploads/2022/12/Files.zip?media=1632743877" target="_blank" rel="noreferrer noopener">Click here to download files and images.</a></h2>
+
+
+
+<h2>Main.py</h2>
+
+
+
+<div class="wp-block-urvanov-syntax-highlighter-code-block"><pre class="lang:python decode:true ">import os
+import pickle
+import numpy as np
+import cv2
+import face_recognition
+import cvzone
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+from firebase_admin import storage
+import numpy as np
+from datetime import datetime
+
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': "",
+    'storageBucket': ""
+})
+
+bucket = storage.bucket()
+
+cap = cv2.VideoCapture(1)
+cap.set(3, 640)
+cap.set(4, 480)
+
+imgBackground = cv2.imread('Resources/background.png')
+
+# Importing the mode images into a list
+folderModePath = 'Resources/Modes'
+modePathList = os.listdir(folderModePath)
+imgModeList = []
+for path in modePathList:
+    imgModeList.append(cv2.imread(os.path.join(folderModePath, path)))
+# print(len(imgModeList))
+
+# Load the encoding file
+print("Loading Encode File ...")
+file = open('EncodeFile.p', 'rb')
+encodeListKnownWithIds = pickle.load(file)
+file.close()
+encodeListKnown, studentIds = encodeListKnownWithIds
+# print(studentIds)
+print("Encode File Loaded")
+
+modeType = 0
+counter = 0
+id = -1
+imgStudent = []
+
+while True:
+    success, img = cap.read()
+
+    imgS = cv2.resize(img, (0, 0), None, 0.25, 0.25)
+    imgS = cv2.cvtColor(imgS, cv2.COLOR_BGR2RGB)
+
+    faceCurFrame = face_recognition.face_locations(imgS)
+    encodeCurFrame = face_recognition.face_encodings(imgS, faceCurFrame)
+
+    imgBackground[162:162 + 480, 55:55 + 640] = img
+    imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
+
+    if faceCurFrame:
+        for encodeFace, faceLoc in zip(encodeCurFrame, faceCurFrame):
+            matches = face_recognition.compare_faces(encodeListKnown, encodeFace)
+            faceDis = face_recognition.face_distance(encodeListKnown, encodeFace)
+            # print("matches", matches)
+            # print("faceDis", faceDis)
+
+            matchIndex = np.argmin(faceDis)
+            # print("Match Index", matchIndex)
+
+            if matches[matchIndex]:
+                # print("Known Face Detected")
+                # print(studentIds[matchIndex])
+                y1, x2, y2, x1 = faceLoc
+                y1, x2, y2, x1 = y1 * 4, x2 * 4, y2 * 4, x1 * 4
+                bbox = 55 + x1, 162 + y1, x2 - x1, y2 - y1
+                imgBackground = cvzone.cornerRect(imgBackground, bbox, rt=0)
+                id = studentIds[matchIndex]
+                if counter == 0:
+                    cvzone.putTextRect(imgBackground, "Loading", (275, 400))
+                    cv2.imshow("Face Attendance", imgBackground)
+                    cv2.waitKey(1)
+                    counter = 1
+                    modeType = 1
+
+        if counter != 0:
+
+            if counter == 1:
+                # Get the Data
+                studentInfo = db.reference(f'Students/{id}').get()
+                print(studentInfo)
+                # Get the Image from the storage
+                blob = bucket.get_blob(f'Images/{id}.png')
+                array = np.frombuffer(blob.download_as_string(), np.uint8)
+                imgStudent = cv2.imdecode(array, cv2.COLOR_BGRA2BGR)
+                # Update data of attendance
+                datetimeObject = datetime.strptime(studentInfo['last_attendance_time'],
+                                                   "%Y-%m-%d %H:%M:%S")
+                secondsElapsed = (datetime.now() - datetimeObject).total_seconds()
+                print(secondsElapsed)
+                if secondsElapsed &gt; 30:
+                    ref = db.reference(f'Students/{id}')
+                    studentInfo['total_attendance'] += 1
+                    ref.child('total_attendance').set(studentInfo['total_attendance'])
+                    ref.child('last_attendance_time').set(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                else:
+                    modeType = 3
+                    counter = 0
+                    imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
+
+            if modeType != 3:
+
+                if 10 &lt; counter &lt; 20:
+                    modeType = 2
+
+                imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
+
+                if counter &lt;= 10:
+                    cv2.putText(imgBackground, str(studentInfo['total_attendance']), (861, 125),
+                                cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
+                    cv2.putText(imgBackground, str(studentInfo['major']), (1006, 550),
+                                cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1)
+                    cv2.putText(imgBackground, str(id), (1006, 493),
+                                cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1)
+                    cv2.putText(imgBackground, str(studentInfo['standing']), (910, 625),
+                                cv2.FONT_HERSHEY_COMPLEX, 0.6, (100, 100, 100), 1)
+                    cv2.putText(imgBackground, str(studentInfo['year']), (1025, 625),
+                                cv2.FONT_HERSHEY_COMPLEX, 0.6, (100, 100, 100), 1)
+                    cv2.putText(imgBackground, str(studentInfo['starting_year']), (1125, 625),
+                                cv2.FONT_HERSHEY_COMPLEX, 0.6, (100, 100, 100), 1)
+
+                    (w, h), _ = cv2.getTextSize(studentInfo['name'], cv2.FONT_HERSHEY_COMPLEX, 1, 1)
+                    offset = (414 - w) // 2
+                    cv2.putText(imgBackground, str(studentInfo['name']), (808 + offset, 445),
+                                cv2.FONT_HERSHEY_COMPLEX, 1, (50, 50, 50), 1)
+
+                    imgBackground[175:175 + 216, 909:909 + 216] = imgStudent
+
+                counter += 1
+
+                if counter &gt;= 20:
+                    counter = 0
+                    modeType = 0
+                    studentInfo = []
+                    imgStudent = []
+                    imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
+    else:
+        modeType = 0
+        counter = 0
+    # cv2.imshow("Webcam", img)
+    cv2.imshow("Face Attendance", imgBackground)
+    cv2.waitKey(1)
+</pre></div>
+
+
+
+<h2>EncodeGenerator.py</h2>
+
+
+
+<div class="wp-block-urvanov-syntax-highlighter-code-block"><pre class="lang:python decode:true ">import cv2
+import face_recognition
+import pickle
+import os
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+from firebase_admin import  storage
+
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': "",
+    'storageBucket': ""
+})
+
+
+# Importing student images
+folderPath = 'Images'
+pathList = os.listdir(folderPath)
+print(pathList)
+imgList = []
+studentIds = []
+for path in pathList:
+    imgList.append(cv2.imread(os.path.join(folderPath, path)))
+    studentIds.append(os.path.splitext(path)[0])
+
+    fileName = f'{folderPath}/{path}'
+    bucket = storage.bucket()
+    blob = bucket.blob(fileName)
+    blob.upload_from_filename(fileName)
+
+
+    # print(path)
+    # print(os.path.splitext(path)[0])
+print(studentIds)
+
+
+def findEncodings(imagesList):
+    encodeList = []
+    for img in imagesList:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+
+    return encodeList
+
+
+print("Encoding Started ...")
+encodeListKnown = findEncodings(imgList)
+encodeListKnownWithIds = [encodeListKnown, studentIds]
+print("Encoding Complete")
+
+file = open("EncodeFile.p", 'wb')
+pickle.dump(encodeListKnownWithIds, file)
+file.close()
+print("File Saved")
+</pre></div>
+
+
+
+<h2>AddDatatoDatabase.py</h2>
+
+
+
+<div class="wp-block-urvanov-syntax-highlighter-code-block"><pre class="lang:python decode:true ">import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': ""
+})
+
+ref = db.reference('Students')
+
+data = {
+    "321654":
+        {
+            "name": "Murtaza Hassan",
+            "major": "Robotics",
+            "starting_year": 2017,
+            "total_attendance": 7,
+            "standing": "G",
+            "year": 4,
+            "last_attendance_time": "2022-12-11 00:54:34"
+        },
+    "852741":
+        {
+            "name": "Emly Blunt",
+            "major": "Economics",
+            "starting_year": 2021,
+            "total_attendance": 12,
+            "standing": "B",
+            "year": 1,
+            "last_attendance_time": "2022-12-11 00:54:34"
+        },
+    "963852":
+        {
+            "name": "Elon Musk",
+            "major": "Physics",
+            "starting_year": 2020,
+            "total_attendance": 7,
+            "standing": "G",
+            "year": 2,
+            "last_attendance_time": "2022-12-11 00:54:34"
+        }
+}
+
+for key, value in data.items():
+    ref.child(key).set(value)
+</pre></div>
+			</div>
+
+			
+	</div> <!--/.ld-tabs-content-->
+
+</div> <!--/.ld-tabs-->
+<div class="learndash-wrapper learndash-shortcode-wrap-ld_navigation-103859_103864_220814"><div class="ld-content-actions">
+
+		<div class="ld-content-action ">
+			<a class="ld-button " href="https://www.computervision.zone/lessons/video-lesson-28/">
+						<span class="ld-icon ld-icon-arrow-left"></span>
+						<span class="ld-text">Previous Lesson</span>
+		</a>
+		</div>
+
+				<div class="ld-content-action">
+			<form class="sfwd-mark-complete" method="post" action="https://www.computervision.zone/lessons/code-and-files-26/"><input type="hidden" value="103864" name="post">
+				<input type="hidden" value="103859" name="course_id">
+				<input type="hidden" value="c7eb137743" name="sfwd_mark_complete">
+				<input type="submit" value="Mark Complete" class="learndash_mark_complete_button"></form>			<a href="https://www.computervision.zone/courses/face-recognition-with-real-time-database/" class="ld-primary-color ld-course-step-back">Back to Course</a>
+			</div>
+			<div class="ld-content-action ld-empty">
+						</div>
+					
+</div> <!--/.ld-topic-actions-->
+
+</div>
+</div> <!--/.learndash-wrapper-->
+</div>
+			
+			
+			
+					</div> <!--/.ld-focus-content-->
+
+	</div> <!--/.ld-focus-main-->
+
+						</div> <!--/.ld-focus-->
+			</div> <!--/.ld-learndash-wrapper-->
+
+						
+	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/jquery.blockUI.min.js.download" id="jquery-blockui-js"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View basket","cart_url":"https:\/\/www.computervision.zone\/basket\/","is_cart":"","cart_redirect_after_add":"yes"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/add-to-cart.min.js.download" id="wc-add-to-cart-js"></script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/js.cookie.min.js.download" id="js-cookie-js"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/woocommerce.min.js.download" id="woocommerce-js"></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_2d2dc6ef759fb94c52581acc58cac54c","fragment_name":"wc_fragments_2d2dc6ef759fb94c52581acc58cac54c","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/cart-fragments.min.js.download" id="wc-cart-fragments-js"></script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/learndash_pager.min.js.download" id="learndash_pager_js-js"></script>
+<script type="text/javascript" id="learndash_template_script_js-js-extra">
+/* <![CDATA[ */
+var sfwd_data = {"json":"{\"ajaxurl\":\"https:\\\/\\\/www.computervision.zone\\\/wp-admin\\\/admin-ajax.php\"}"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/learndash_template_script.min.js.download" id="learndash_template_script_js-js"></script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/jquery.dropdown.min.js.download" id="jquery-dropdown-js-js"></script>
+<script type="text/javascript" id="learndash-front-js-extra">
+/* <![CDATA[ */
+var ldVars = {"postID":"103864","videoReqMsg":"You must watch the video before accessing this content","ajaxurl":"https:\/\/www.computervision.zone\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Code and Files - Computer Vision Zone_files/learndash.js.download" id="learndash-front-js"></script>
+
+	
+
+</body></html>
